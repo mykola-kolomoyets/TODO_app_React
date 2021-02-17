@@ -1,11 +1,25 @@
+// IMPORTS
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+// ROOT ELEMENT
 const root = document.getElementById('root');
 
-const el = (
-  <div class="todo-app">
+// COMPONENTS
+const TodoTitle = () => {
+  return (
     <h1 className="todo-app__title">REACT TODO APP</h1>
-    <input type="text"/>
+  )
+}
+
+const TodoSearch = () => {
+  return (
+    <input type="text" />
+  )
+}
+
+const TodoList = () => {
+  return (
     <ul className="todo-app__list">
       <li className="todo-app__list--item">Item1</li>
       <li className="todo-app__list--item">Item2</li>
@@ -13,12 +27,24 @@ const el = (
       <li className="todo-app__list--item">Item4</li>
       <li className="todo-app__list--item">Item5</li>
     </ul>
-  </div>
-);
+  )
+}
 
+const App = () => {
+  return (
+    <div class="todo-app">
+      <TodoTitle />
+      <TodoSearch />
+      <TodoList />
+    </div>
+  )
+}
+
+
+// RENDERING
 ReactDOM.render(
   <React.StrictMode>
-    {el}
+    <App/>
   </React.StrictMode>,
   root
 );
