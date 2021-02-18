@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 
-const TodoListItem = ({label}) => {
+const TodoListItem = ({ label, important = false }) => {
+
+	const liStyle = {
+		color: important ? "tomato" : "black"
+	};
+
 	return (
-		<li>{label}</li>
+		<li>
+			<span style={liStyle}>{label}</span>
+		</li>
 	)
 };
 

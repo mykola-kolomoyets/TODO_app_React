@@ -5,14 +5,18 @@ import TodoListItem from './../TodoListItem/TodoListItem';
 
 const TodoList = () => {
   const items = [
-    "Learn React",
-    "Make TODO App",
-    "Create more portfolio projects",
-    "Pass the interview",
-    "Get the job"
+    ["Learn React", true],
+    ["Make TODO App", true],
+    ["Create more portfolio projects", false],
+    ["Pass the interview", true],
+    ["Get the job", true],
+    ["Drink Coffee", false]
   ];
 
-  const todoListItems = items.map(label => <TodoListItem className="todo-app__list--item" label={label}/>);
+  const todoListItems = items.map(item => <TodoListItem 
+    className="todo-app__list--item" label={item[0]}
+    important={item[1]}
+  />);
 
   return (
     <ul className="todo-app__list">
