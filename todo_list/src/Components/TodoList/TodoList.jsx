@@ -12,7 +12,7 @@ const TodoList = () => {
     "Get the job"
   ];
 
-  const todoListItems = items.map(item => <TodoListItem className="todo-app__list--item" item={item}/>);
+  const todoListItems = items.map(label => <TodoListItem className="todo-app__list--item" label={label}/>);
 
   return (
     <ul className="todo-app__list">

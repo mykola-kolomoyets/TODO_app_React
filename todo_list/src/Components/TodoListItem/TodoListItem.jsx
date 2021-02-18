@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 
-const TodoListItem = (props) => {
+const TodoListItem = ({label}) => {
 	return (
-		<li>{props.item}</li>
+		<li>{label}</li>
 	)
 };
 
