@@ -5,10 +5,13 @@ import TodoListItem from './../TodoListItem/TodoListItem';
 
 const TodoList = (props) => {
   const todoListItems = props.todoData.map((itemData) => {
+    const {id, ...todoItemData} = itemData;
+
     return (
       <TodoListItem
-        className="todo-app__list--item" 
-        {...itemData}
+        className="todo-app__list--item"
+        {...todoItemData}
+        key={id}
       />
     );
   });

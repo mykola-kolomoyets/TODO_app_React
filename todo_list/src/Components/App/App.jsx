@@ -18,27 +18,33 @@ const App = () => {
   const todoData = [
     {
       label: "Learn React",
-      important: true
+      important: true,
+      id: 1
     },
     {
       label: "Make TODO App",
-      important: true
+      important: true,
+      id: 2
     },
     {
       label: "Create more portfolio projects",
-      important: false
+      important: false,
+      id: 3
     },
     {
       label: "Pass the interview",
-      important: true
+      important: true,
+      id: 4
     },
     {
       label: "Get the job",
-      important: true
+      important: true,
+      id: 5
     },
     {
       label: "Drink Coffee",
-      important: false
+      important: false,
+      id: 6
     },
   ]
   return (
