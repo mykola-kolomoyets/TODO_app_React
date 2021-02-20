@@ -9,7 +9,6 @@ const TodoList = (props) => {
 
     return (
       <TodoListItem
-        className="todo-app__list--item"
         {...todoItemData}
         key={id}
       />
@@ -17,7 +16,7 @@ const TodoList = (props) => {
   });
 
   return (
-    <ul className="todo-app__list">
+    <ul className="todo-app__list list-group">
       {todoListItems}
     </ul>
   )
